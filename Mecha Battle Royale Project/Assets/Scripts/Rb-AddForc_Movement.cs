@@ -18,7 +18,9 @@ public class Movement : MonoBehaviour
     public float rotationSpeed = 30;
 
     [Header("Camera")]
-    public Cinemachine.AxisState xAxis, yAxis;
+    public Cinemachine.AxisState xAxis;
+    public Cinemachine.AxisState yAxis;
+    
     [SerializeField] Transform camFollowPos;
 
     void Start()
@@ -33,6 +35,8 @@ public class Movement : MonoBehaviour
     {
         move();
         CameraRotation();
+
+        // turn this on if you are using mehas like Neutron Star
         // PlayerRotation();
     }
 
